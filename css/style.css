@@ -1,0 +1,22 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.card {
+	margin-bottom: 100px;
+}
+.title {
+	text-align: center;
+	margin-bottom: 100px;
+}
+.card-img-top {
+	width: 100%;
+	height: 100%;
+}
+.btn-warning{
+	padding: 10px 30px;
+}
+.number {
+
+}
