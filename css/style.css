@@ -4,7 +4,7 @@
 }
 
 .card {
-	margin-bottom: 100px;
+	margin-bottom: 200px;
 }
 .title {
 	text-align: center;
@@ -17,6 +17,8 @@
 .btn-warning{
 	padding: 10px 30px;
 }
-.number {
-
+.total {
+	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 300px;
 }

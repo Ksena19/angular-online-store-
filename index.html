@@ -20,72 +20,27 @@
     <h2 class="title">{{title}} <i class="em em-shopping_bags"></i></h2>
 <div class="container">
 <div class="row">
-  <div class="col-lg-4 col-md-2 col-sm-6">
-    	 <div class="card" style="width: 18rem;" ng-repeat='item in itemsArray'>
+  <div class="col-lg-4 col-md-2 col-sm-6" ng-repeat='item in itemsArray'>
+    	 <div class="card" style="width: 18rem;">
 	  <img class="card-img-top" ng-src={{item.img}} alt="Card image cap">
 	  <div class="card-body">
 	    <h5 class="card-title"></h5>
 	    <p class="card-text">{{item.name}}</p>
 	    <p class="price">{{ item.price | currency }}</p>
-	    <a href="#"  class="btn btn-warning" ng-click="addTo()"><i class="em em-shopping_trolley"></i>  Add to cart <span class="number">{{ count }}</span></a>
-	    
-	    </p>
+	    <p class="total-per-item">{{ item.quantity * item.price | currency }}</p>
+	    <a class="btn btn-warning" ng-click="addTo(item)"><i class="em em-shopping_trolley"></i>  Add to cart <span class="number">{{ item.quantity }}</span></a>
 	  </div>
 	</div>
   </div>
   </div>
 </div>
 
- <!--  <div class="col-lg-4 col-md-2 col-sm-6">
-  	 <div class="card" style="width: 18rem;">
-		  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-		    <a href="#" class="btn btn-primary">Add to cart</a>
-		  </div>
-		</div>
-  </div>
-  <div class="col-lg-4 col-md-2 col-sm-6">
-  	  <div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="card-title">Card title</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	    <a href="#" class="btn btn-primary">Add to cart</a>
-	  </div>
+	<div class="container">
+		<span class="total">
+		   Total sum:   {{ getTotal() | currency }}
+		</span>	
 	</div>
-  </div>
-  <div class="col-lg-4 col-md-2 col-sm-6">
-  	  <div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="card-title">Card title</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	    <a href="#" class="btn btn-primary">Add to cart</a>
-	  </div>
-	</div>
-  </div>
-    <div class="col-lg-4 col-md-2 col-sm-6">
-  	  <div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="card-title">Card title</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	    <a href="#" class="btn btn-primary">Add to cart</a>
-	  </div>
-	</div>
-  </div>
-    <div class="col-lg-4 col-md-2 col-sm-6">
-  	  <div class="card" style="width: 18rem;">
-	  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-	  <div class="card-body">
-	    <h5 class="card-title">Card title</h5>
-	    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-	    <a href="#" class="btn btn-primary">Add to cart</a>
-	  </div>
-	</div>
-  </div> -->
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </body>
