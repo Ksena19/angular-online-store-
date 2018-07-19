@@ -25,7 +25,7 @@ angular.module('TransactionApp', [])
    $scope.cart = [];
    
    $scope.getTotal = function() {
-
+      return $scope.itemsArray.reduce((a, b) => a + b.price * b.quantity, 0);
    }
    
   
